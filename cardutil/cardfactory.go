@@ -7,7 +7,7 @@ import (
 	"strings"
 	"errors"
 )
-func makeCard(text string, template string, file string) (string, error) {
+func MakeCard(text string, template string, file string) (string, error) {
 
 	//Replacing String in LaTeX template
 	tex := strings.NewReplacer("{{text}}", text).Replace(template)
