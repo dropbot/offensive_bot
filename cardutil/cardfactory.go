@@ -1,4 +1,4 @@
-package github.com/dropbox/offensive_bot/cardutil
+package github.com/dropbot/offensive_bot/cardutil
 
 import (
 	"fmt"
