@@ -22,3 +22,9 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+# tex file
+*.log
+*.aux
+*.pdf
+*.png
