@@ -1,12 +1,13 @@
-package github.com/dropbot/offensive_bot/cardutil
+package cardutil
 
 import (
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"os/exec"
 	"strings"
-	"errors"
 )
+
 func MakeCard(text string, template string, file string) (string, error) {
 
 	//Replacing String in LaTeX template
@@ -52,5 +53,5 @@ func MakeCard(text string, template string, file string) (string, error) {
 		return nil, errors.New("convert failure")
 	}
 	//Success
-	return (dir+file+".png"),nil
+	return (dir + file + ".png"), nil
 }

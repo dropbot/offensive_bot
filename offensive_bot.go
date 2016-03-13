@@ -1,10 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
-    "os"
-    "fmt"
+	"os"
 )
 
 func main() {
@@ -25,7 +25,7 @@ func main() {
 	for update := range updates {
 		log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
 
-        replytext := fmt.Sprintf("Oi, %s", update.Message.From.FirstName)
+		replytext := fmt.Sprintf("Oi, %s", update.Message.From.FirstName)
 
 		msg := tgbotapi.NewMessage(update.Message.Chat.ID, replytext)
 		msg.ReplyToMessageID = update.Message.MessageID
